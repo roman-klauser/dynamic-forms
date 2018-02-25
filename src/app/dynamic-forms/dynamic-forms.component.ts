@@ -9,16 +9,23 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class DynamicFormsComponent implements OnInit {
 
   form: FormGroup;
-  fieldName = 'age';
-  fieldValue = '33';
+  person = {
+    firstName: 'Max',
+    lastName: 'Mustermann',
+    age: 32
+  };
+  personProps = [];
 
   constructor() {
   }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      [this.fieldName]: new FormControl(this.fieldValue)
-    });
+    const formData = {}
+    for (const prop of Object.keys(this.person)) {
+      formData[prop] = new FormControl(this.person[prop]);
+      this.personProps.push(prop);
+    }
+    this.form = new FormGroup(formData);
   }
 
 }
