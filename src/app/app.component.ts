@@ -19,17 +19,26 @@ export class AppComponent {
     firstName: {
       value: 'Max',
       label: 'First name',
-      type: 'text'
+      type: 'text',
+      validators: {
+        required: true
+      }
     },
     lastName: {
       value: 'Mustermann',
       label: 'Last name',
-      type: 'text'
+      type: 'text',
+      validators: {
+        required: true
+      }
     },
     age: {
       value: 32,
       label: 'Age',
-      type: 'number'
+      type: 'number',
+      validators: {
+        min: 18
+      }
     },
     city: {
       value: 'MS',
