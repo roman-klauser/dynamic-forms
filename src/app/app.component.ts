@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   person = {
+    gender: {
+      value: 'M',
+      label: 'Gender',
+      type: 'radio',
+      options: [
+        { label: 'Male', value: 'M'},
+        { label: 'Female', value: 'F'},
+      ]
+    },
     firstName: {
       value: 'Max',
       label: 'First name',
