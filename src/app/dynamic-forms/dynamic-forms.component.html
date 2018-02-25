@@ -1,6 +1,7 @@
 <form [formGroup]="form">
   <div *ngFor="let prop of personProps">
-  <input type="text" [formControlName]="prop">
+    <label>{{ prop.label }}: </label>
+    <input [type]="prop.type" [formControlName]="prop.key">
   </div>
 </form>
 <hr>
