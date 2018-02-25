@@ -21,6 +21,17 @@ export class AppComponent {
       value: 32,
       label: 'Age',
       type: 'number'
+    },
+    city: {
+      value: 'MS',
+      label: 'city',
+      type: 'select',
+      options: [
+        { label: '(choose one)', value: ''},
+        { label: 'Münster', value: 'MS'},
+        { label: 'Berlin', value: 'B'},
+        { label: 'Düsseldorf', value: 'D'},
+      ]
     }
   };
 }
